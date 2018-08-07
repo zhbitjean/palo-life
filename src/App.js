@@ -3,6 +3,7 @@ import './App.css';
 import Movies from './components/movies'
 import Counters from './components/counters'
 import NavBar from './components/navbar'
+import Home from './components/home'
 
 class App extends Component {
     state = {
@@ -51,6 +52,7 @@ class App extends Component {
             <React.Fragment>
                 <NavBar totalCounters={this.state.counters.length}/>
                 <main className="container">
+                    <Home />
                     <Counters
                         counters={this.state.counters}
                         onDelete={this.handleDelete}
