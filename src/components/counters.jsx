@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 class Counters extends Component {
     render() {
-        const {onReset, counters, onDelete, onIncrement} = this.props;
+        const {onReset, counters, onDelete, onIncrement, onDecrement} = this.props;
         return (
             <div>
                 <button
@@ -15,6 +15,7 @@ class Counters extends Component {
                     <Counter
                         key={counter.id}
                         onIncrement={onIncrement}
+                        onDecrement={onDecrement}
                         onDelete={onDelete}
                         counter={counter}
                     >
